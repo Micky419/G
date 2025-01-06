@@ -7,7 +7,7 @@ public class Misc {
 
     public static int sum(int arg1, int arg2) {
         if(arg1 > 100 || arg2 > 100){
-            throw new TooLargeNumbers("Numbers greater than 100 not allowed");
+            throw new RuntimeException("Numbers greater than 100 not allowed");
         }
         return arg1 + arg2;
     }
