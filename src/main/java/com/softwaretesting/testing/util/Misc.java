@@ -6,6 +6,9 @@ import org.springframework.util.Assert;
 public class Misc {
 
     public static int sum(int arg1, int arg2) {
+        if(arg1 > 100 || arg2 > 100){
+            throw new TooLargeNumbers("Numbers greater than 100 not allowed");
+        }
         return arg1 + arg2;
     }
 
@@ -32,5 +35,17 @@ public class Misc {
         }
 
         return false;
+    }
+
+    public int subtract(int n1, int n2){
+        if(n1<n2){
+            return 0;
+        }
+        return n1-n2;
+    }
+
+    public int multiply(int n1, int n2){
+
+        return n1*n2;
     }
 }
